@@ -1,7 +1,7 @@
 FROM python:3.11-slim-bullseye
 WORKDIR /app
 RUN apt-get update && apt-get install -y git
-RUN git clone https://github.com/didkskskssk-droid/forkseless/blob/b8a40b5afc95f2f110efd4648f76d71fef8f1b1a/Dockerfile 
+RUN git clone https://github.com/YourUsername/YourRepoName 
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 7860
 CMD ["uvicorn", "run:main_app", "--host", "0.0.0.0", "--port", "7860", "--workers", "4"]
